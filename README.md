@@ -1,5 +1,5 @@
 # FaleMais
-* Projeto para LOLDESIGN do sistema fale mais *
+Projeto para LOLDESIGN do sistema fale mais
 ## Descrição
     A empresa de telefonia Telzir, especializada em chamadas de longa distância nacional, vai
 colocar um novo produto no mercado chamado FaleMais.
@@ -21,17 +21,17 @@ plano FaleMais. O sistema deve mostrar dois valores:
 ## Analise de requisitos
     Possibilita entender a necessidade do cliente e analisar a possivel solução.
 ### Usabilidade
-    [x] deve ser prático e de fácil uso
+   - [x] deve ser prático e de fácil uso
 ### Portabilidade
-    [x] deve ser responsivo e/ou possuir uma versão mobile
+   - [x] deve ser responsivo e/ou possuir uma versão mobile
 ### Funcionalidades
     1. Possibilidade de consultar tarifa. 
     2. Possibilidade de visualizar todos as tarifas por cada DDD cadastrado
     3. Possibilidade de consultar planos.
 
 ## Database
-    []  Tabela DDD { ddd_id: int, DDD: varchar[3] }
-    []  Tabela tarifa { tr_id: int, ddd_origin: int, ddd_dest: int, val_per_minute: varchar[5]  }
+   - [x]  Tabela DDD { ddd_id: int, DDD: varchar[3] }
+   - [x]  Tabela tarifa { tr_id: int, ddd_origin: int, ddd_dest: int, val_per_minute: varchar[5]  }
 
 
 ## Técnologias Utilizadas
@@ -39,4 +39,12 @@ plano FaleMais. O sistema deve mostrar dois valores:
     2. Mysql
     3. Express
     4. Sequelize
+
+
+## Comandos
+### Passos
+- [x] Abra o bash na raiz do projeto
+- [x] Execute: npm install
+- [x] Execute: yarn sequelize db:create
+- [x] Execute: yarn sequelize db:migrate
 
