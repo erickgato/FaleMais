@@ -1,0 +1,18 @@
+{
+  "name": "FaleMais",
+  "version": "1.0.0",
+  "description": "Projeto para a empresa LOLDESIGN ",
+  "main": "index.js",
+  "repository": "https://github.com/erickgato/FaleMais",
+  "author": "Erick de souza Gato",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql2": "^2.1.0",
+    "pg": "^8.3.0",
+    "sequelize": "^6.3.3"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.2.0"
+  }
+}
