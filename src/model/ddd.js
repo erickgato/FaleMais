@@ -1,12 +1,17 @@
 const knex = require('../database/database');
 
 class DddModel{
-    static GetDDDs() {
-        const DDD  = knex('fm_ddd');
-        return json(DDD);
+    async GetDDDs() {
+        const DDD  =  await knex('fm_ddd');
+        return DDD;
     }
-    static GetDDD(number) {
-        return json(knex('fm_ddd').where("ddd",number));
+    async GetDDD(number) {
+        const result = await knex.select('*').from('fm_ddd').where('ddd','011');
+        return result;
+    }
+    async CreateDDD(ddd) {
+        const insert = await knex.insert([{ddd}]).into('fm_ddd');
+        return insert;
     }
 }
 module.exports = new DddModel();
