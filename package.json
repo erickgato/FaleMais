@@ -6,6 +6,9 @@
   "repository": "https://github.com/erickgato/FaleMais",
   "author": "Erick de souza Gato",
   "license": "Apache-2.0",
+  "scripts": {
+    "dev" : "nodemon src/server.js"
+  },
   "dependencies": {
     "express": "^4.17.1",
     "knex": "^0.21.2",
