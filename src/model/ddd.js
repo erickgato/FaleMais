@@ -1,6 +1,6 @@
-const knex = require('../database');
+const knex = require('../database/database');
 
-export default class DddModel{
+class DddModel{
     static GetDDDs() {
         const DDD  = knex('fm_ddd');
         return json(DDD);
@@ -9,3 +9,4 @@ export default class DddModel{
         return json(knex('fm_ddd').where("ddd",number));
     }
 }
+module.exports = new DddModel();
