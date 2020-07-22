@@ -7,16 +7,21 @@
   "author": "Erick de souza Gato",
   "license": "Apache-2.0",
   "scripts": {
-    "dev" : "nodemon src/server.js"
+    "dev": "nodemon src/server.js --ignore __tests__",
+    "pretest": "SET NODE_ENV=test & knex migrate:latest ",
+    "test": "Jest",
+    "posttest": "SET NODE_ENV=test & knex migrate:rollback "
   },
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "knex": "^0.21.2",
     "mysql": "^2.18.1",
     "nodemon": "^2.0.4",
-    "pg": "^8.3.0"
+    "sqlite3": "^5.0.0"
   },
   "devDependencies": {
+    "jest": "^26.1.0",
     "sequelize-cli": "^6.2.0"
   }
 }
