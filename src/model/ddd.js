@@ -38,6 +38,7 @@ class DddModel {
       .where({ ddd_id: id })
       .update({
         ddd: number,
+        updated_at: knex.fn.now()
       })
       .then(() => {
         "Updated sucess";

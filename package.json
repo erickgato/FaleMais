@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "nodemon src/server.js --ignore __tests__",
     "pretest": "SET NODE_ENV=test & knex migrate:latest ",
-    "test": "Jest",
+    "test": "Jest --coverage",
     "posttest": "SET NODE_ENV=test & knex migrate:rollback "
   },
   "dependencies": {
@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "jest": "^26.1.0",
-    "sequelize-cli": "^6.2.0"
+    "sequelize-cli": "^6.2.0",
+    "supertest": "^4.0.2"
   }
 }
