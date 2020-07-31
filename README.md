@@ -32,19 +32,23 @@ plano FaleMais. O sistema deve mostrar dois valores:
 ## Database
    - [x]  Tabela DDD { ddd_id: int, DDD: varchar[3] }
    - [x]  Tabela tarifa { tr_id: int, ddd_origin: int, ddd_dest: int, val_per_minute: varchar[5]  }
-
-
+### Nota: 
+    Você apenas deve criar um banco de dados chamado falemais e configurá-lo,
+    as tabelas e seeds serão criadas com o query builder
 ## Técnologias Utilizadas
     1. Nodejs
     2. Mysql
     3. Express
-    4. Sequelize
+    4. knex
 
 
 ## Comandos
 ### Passos
 - [x] Abra o bash na raiz do projeto
-- [x] Execute: npm install
-- [x] Execute: yarn sequelize db:create
-- [x] Execute: yarn sequelize db:migrate
-
+- [x] Execute: yarn
+- [x] Execute: yarn knex migrate:latest 
+- [x] Execute: yarn knex seed:run
+#### Servidor
+Para iniciar a api utilize a porta 4000(importante pois o frontend está escutando esta porta)
+-[x] Digite yarn dev
+### Coletion do PostMAN para a api: 
