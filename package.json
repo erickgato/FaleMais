@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "nodemon src/server.js --ignore __tests__",
     "pretest": "SET NODE_ENV=test & knex migrate:latest ",
-    "test": "Jest --coverage",
+    "test": "Jest --coverage --detectOpenHandles",
     "posttest": "SET NODE_ENV=test & knex migrate:rollback "
   },
   "dependencies": {
