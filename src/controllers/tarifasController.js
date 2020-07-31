@@ -3,7 +3,7 @@ const DddModel = require("../model/ddd");
 class tarifasController {
   static async VerifyDDD(ddd) {
     const search = await DddModel.GetDDD(ddd);
-    return search == "" ? false : true;
+    return search.length == ''  ? false : true
   }
 
   async index(req, resp, next) {
@@ -17,8 +17,8 @@ class tarifasController {
   async ByDestination(req, resp, next){
       try {
         const { origin, destination } = req.query;
-        if(!tarifasController.VerifyDDD(origin) || !tarifasController.VerifyDDD(destination)) return resp.status(404).send();
-        return resp.json( await tarifasModel.GetTarifa( origin  ,   destination ).catch(err => resp.status(404).send) ); 
+        if(! await tarifasController.VerifyDDD(origin) || ! await tarifasController.VerifyDDD(destination)) return resp.status(404).send();
+        return resp.json( await tarifasModel.GetTarifa( origin  ,   destination ).catch(() => resp.status(404).send()) ); 
       } catch (error) {
           next(error);
       }

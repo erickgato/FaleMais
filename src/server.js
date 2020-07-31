@@ -1,16 +1,16 @@
 const app = require('./app');
-const knex = require('./database/database');
+const cors = require('cors');
 
-//  Errors
-// 404
+//CORS
+app.use(cors());
+
+//  Error 404
 app.use((req,resp,next ) => {
   const err = new Error('Not found');
   err.status = 404;
   next(err);
 })
-app.use((error,req,resp) => {
-  const err = new Error('')
-})
+//Errors 
 app.use((error,req,resp,next) => {
   resp.status(error.status || 500 );
   resp.json({ error: error.message })
