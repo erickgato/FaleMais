@@ -2,17 +2,23 @@ const routes = require('express').Router();
 const DDDcontroller = require('./controllers/dddController');
 const TarifasController = require('./controllers/tarifasController');
 const PlansController = require('./controllers/planController');
+
+routes.all('/*', function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    next();
+  });
 //DDDs
-routes.get('/ddds', DDDcontroller.index );
-routes.post('/ddds', DDDcontroller.store);
-routes.delete('/ddds', DDDcontroller.Delete);
-routes.put('/ddds', DDDcontroller.Alter);
+routes.get('/api/ddds', DDDcontroller.index );
+routes.post('/api/ddds', DDDcontroller.store);
+routes.delete('/api/ddds', DDDcontroller.Delete);
+routes.put('api/ddds', DDDcontroller.Alter);
 //Tarifas
-routes.get('/tarifas', TarifasController.index )
-routes.get('/tarifas/destination', TarifasController.ByDestination )
+routes.get('/api/tarifas', TarifasController.index )
+routes.get('/api/tarifas/destino', TarifasController.ByDestination )
 ///Planos
-routes.get('/planos', PlansController.index);
-routes.get('/planos/especific', PlansController.SearchByid)
+routes.get('/api/planos', PlansController.index);
+routes.get('/api/planos/especifico', PlansController.SearchByid)
 
 
 
