@@ -51,7 +51,7 @@ plano FaleMais. O sistema deve mostrar dois valores:
 #### Servidor
 Para iniciar a api utilize a porta 4000(importante pois o frontend está escutando esta porta)
 -[x] Digite yarn dev
-### Coletion do PostMAN para a api: 
+### Coletion do PostMAN para a api: https://www.getpostman.com/collections/d9d42d4d651d83d13740
 
 ### Testes
 -[x] Crie uma base de dados para teste e a coloque no arquivo .env.test
