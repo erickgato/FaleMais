@@ -2,7 +2,7 @@ const knex = require("../database/database");
 
 class DddModel {
   async GetDDDs() {
-    const DDD = await knex("fm_ddd");
+    const DDD = await knex.select('ddd_id','ddd').from('fm_ddd');
     return DDD;
   }
   async GetDDD(number) {
