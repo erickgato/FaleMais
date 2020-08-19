@@ -1,5 +1,4 @@
 # FaleMais
-Projeto para LOLDESIGN do sistema fale mais
 ## Descrição
     A empresa de telefonia Telzir, especializada em chamadas de longa distância nacional, vai
 colocar um novo produto no mercado chamado FaleMais.
